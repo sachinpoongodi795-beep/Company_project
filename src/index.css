@@ -1,0 +1,45 @@
+/* Novatech Solutions — Master CSS Import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap');
+@import '../assets/css/variables.css';
+@import '../assets/css/base.css';
+@import '../assets/css/components.css';
+@import '../assets/css/layout.css';
+@import '../assets/css/admin.css';
+
+/* Paper Rocket Animation */
+.rocket-animation-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.paper-rocket {
+  position: absolute;
+  bottom: 20px;
+  left: -50px;
+  color: var(--color-accent-sky, #0ea5e9);
+  animation: flyRocket 15s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes flyRocket {
+  0% {
+    transform: translate(0, 0) rotate(15deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(calc(100vw + 100px), -150px) rotate(45deg) scale(1.2);
+    opacity: 0;
+  }
+}
